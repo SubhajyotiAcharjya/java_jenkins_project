@@ -1,52 +1,43 @@
-public class TemperatureConverter {
+public class Test {
 
-    // Celsius to Fahrenheit
-    static void celsiusToFahrenheit(double celsius) {
-        double fahrenheit = (celsius * 9/5) + 32;
-        System.out.println(celsius + "°C is equal to " + fahrenheit + "°F");
+    // Addition
+    static void add(int a, int b) {
+        int res = a + b;
+        System.out.println("Addition result: " + res);
     }
 
-    // Celsius to Kelvin
-    static void celsiusToKelvin(double celsius) {
-        double kelvin = celsius + 273.15;
-        System.out.println(celsius + "°C is equal to " + kelvin + "K");
+    // Subtraction
+    static void sub(int a, int b) {
+        int res = a - b;
+        System.out.println("Subtraction result: " + res);
     }
 
-    // Fahrenheit to Celsius
-    static void fahrenheitToCelsius(double fahrenheit) {
-        double celsius = (fahrenheit - 32) * 5/9;
-        System.out.println(fahrenheit + "°F is equal to " + celsius + "°C");
+    // Multiplication
+    static void mul(int a, int b) {
+        int res = a * b;
+        System.out.println("Multiplication result: " + res);
     }
 
-    // Fahrenheit to Kelvin
-    static void fahrenheitToKelvin(double fahrenheit) {
-        double kelvin = (fahrenheit - 32) * 5/9 + 273.15;
-        System.out.println(fahrenheit + "°F is equal to " + kelvin + "K");
-    }
-
-    // Kelvin to Celsius
-    static void kelvinToCelsius(double kelvin) {
-        double celsius = kelvin - 273.15;
-        System.out.println(kelvin + "K is equal to " + celsius + "°C");
-    }
-
-    // Kelvin to Fahrenheit
-    static void kelvinToFahrenheit(double kelvin) {
-        double fahrenheit = (kelvin - 273.15) * 9/5 + 32;
-        System.out.println(kelvin + "K is equal to " + fahrenheit + "°F");
+    // Division
+    static void div(int a, int b) {
+        if (b != 0) {
+            double res = (double) a / b;
+            System.out.println("Division result: " + res);
+        } else {
+            System.out.println("Error: Division by zero is not allowed.");
+        }
     }
 
     // Main method
     public static void main(String[] args) {
-        double tempInCelsius = 25.0;
-        double tempInFahrenheit = 77.0;
-        double tempInKelvin = 300.0;
+        int x = 500;
+        int y = 25;
 
-        celsiusToFahrenheit(tempInCelsius);
-        celsiusToKelvin(tempInCelsius);
-        fahrenheitToCelsius(tempInFahrenheit);
-        fahrenheitToKelvin(tempInFahrenheit);
-        kelvinToCelsius(tempInKelvin);
-        kelvinToFahrenheit(tempInKelvin);
+        add(x, y);
+        sub(x, y);
+        mul(x, y);
+        div(x, y);
     }
 }
+
+
