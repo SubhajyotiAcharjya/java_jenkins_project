@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git credentialsId: 'github-credentials', url: 'https://github.com/SubhajyotiAcharjya/java_jenkins_project.git'
+                git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/SubhajyotiAcharjya/java_jenkins_project.git'
             }
         }
         stage('Build') {
